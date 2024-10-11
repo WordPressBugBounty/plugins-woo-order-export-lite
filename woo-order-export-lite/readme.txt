@@ -5,11 +5,11 @@ Tags: order export,export orders,woocommerce,order,export
 Requires PHP: 5.4.0
 Requires at least: 4.7
 Tested up to: 6.6
-Stable tag: 3.5.4
+Stable tag: 3.5.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Export orders from WooCommerce with ease ( Excel/CSV/TSV/XML/JSON supported )
+Export WooCommerce orders to Excel/CSV/XML/JSON/PDF/HTML/TSV
 
 == Description ==
 This plugin helps you to **easily** export WooCommerce order data. 
@@ -119,6 +119,12 @@ Yes, you can email a request to aprokaev@gmail.com. We intensively develop this 
 6. Select orders to export and use "bulk action".
 
 == Changelog ==
+
+= 3.5.5 - 2024-10-11 =
+* New field "GTIN/EAN" (>Setup Fields>Products)
+* Hide item meta started with underscore, by default
+* Fixed bug - extra html in item meta
+* Minor bugs
 
 = 3.5.4 - 2024-09-18 =
 * Added extra checks and made error messages more informative
