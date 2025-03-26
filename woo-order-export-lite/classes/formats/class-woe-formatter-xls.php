@@ -8,6 +8,7 @@ include_once 'abstract-class-woe-formatter-plain-format.php';
 
 if ( ! class_exists( 'Spreadsheet' ) ) {
 	if (version_compare(phpversion(), WOE_MIN_PHP_VERSION, '<')) {
+		/* translators: PHP version requred for Excel format */
 		echo esc_html(sprintf(__( 'PhpSpreadsheet requires PHP version %s or later.', 'woo-order-export-lite' ), WOE_MIN_PHP_VERSION));
 		die();
 	}
