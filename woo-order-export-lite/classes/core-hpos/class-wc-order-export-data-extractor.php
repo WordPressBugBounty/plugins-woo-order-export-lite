@@ -806,6 +806,8 @@ class WC_Order_Export_Data_Extractor {
 		} elseif ($date_field === 'modified') {
 			$where[] = "orders.date_updated_gmt IS NOT NULL AND orders.date_updated_gmt" . $value;
 		}
+
+		$where = apply_filters("woe_add_date_filter", $where, $date_field, $value);
 	}
 
 	private static function apply_order_filters_to_sql( &$where, &$where_refund_subsql, $settings ) {

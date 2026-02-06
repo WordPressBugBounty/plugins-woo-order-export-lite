@@ -843,6 +843,8 @@ trait WOE_Core_Extractor {
 			$product   = apply_filters( "woe_get_order_product", $product );
 
 			$item_meta = get_metadata( 'order_item', $item_id );
+			if( !$item_meta )
+				$item_meta = array(); //fix for broken order items
 			foreach ( $item_meta as $key => $value ) {
 				$clear_key = wc_sanitize_taxonomy_name( $key );
 				if ( taxonomy_exists( $clear_key ) ) {
@@ -977,7 +979,8 @@ trait WOE_Core_Extractor {
 				$options,
 				$woe_order
 			);
-			if ( $options['include_products'] AND empty( $data['products'] ) AND apply_filters( "woe_skip_order_without_products", false ) ) {
+			$skip_order_without_products = ( $options['exclude_free_items'] OR $options['skip_refunded_items'] );
+			if ( empty( $data['products'] ) AND apply_filters( "woe_skip_order_without_products",  $skip_order_without_products) ) {
 				return array();
 			}
 		} else {

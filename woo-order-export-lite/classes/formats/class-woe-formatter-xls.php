@@ -109,6 +109,10 @@ class WOE_Formatter_Xls extends WOE_Formatter_Plain_Format {
 				$this->storage = new WOE_Formatter_Storage_Csv($storage_filename);
 				$this->storage->load();
 			}
+			 if ( ! class_exists( "XMLWriter" ) AND !$this->settings['use_xls_format']  ){
+				 esc_html_e( 'Please, install/enable PHP XML extension!', 'woo-order-export-lite' ) ;
+				 die();
+			}
 		}
 		if ($this->summary_report_products || $this->summary_report_customers) {
 			$summaryKey = $this->summary_report_products ? WOE_Formatter_Storage_Summary_Session::SUMMARY_PRODUCTS_KEY :

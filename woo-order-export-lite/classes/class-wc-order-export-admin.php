@@ -292,7 +292,7 @@ class WC_Order_Export_Admin {
 
 		$this->enqueue_select2_scripts( $active_tab );
 
-		wp_enqueue_script( 'serializejson', $this->url_plugin . 'assets/js/jquery.serializejson.js', array( 'jquery' ), WOE_VERSION, true);
+		wp_enqueue_script( 'woe-serializejson', $this->url_plugin . 'assets/js/jquery.serializejson.js', array( 'jquery' ), WOE_VERSION, true);
 
 		// kill learn-press
 		// prevent to rewrite $.fn.serializeJSON

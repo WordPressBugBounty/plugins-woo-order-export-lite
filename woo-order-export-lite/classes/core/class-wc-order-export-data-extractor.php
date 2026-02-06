@@ -748,9 +748,11 @@ class WC_Order_Export_Data_Extractor {
 		} elseif ( $date_field == 'paid_date' OR $date_field == 'completed_date' ) // previous versions use mysql datetime
 		{
 			$where_meta[] = "(order_$date_field.meta_value<>'' AND order_$date_field.meta_value " . $value . ")";
-		} else {
+		} elseif( $date_field == 'date' OR $date_field == 'modified') {
 			$where[] = "orders.post_" . $date_field . $value;
 		}
+
+		$where = apply_filters("woe_add_date_filter", $where, $date_field, $value);
 	}
 
 	private static function apply_order_filters_to_sql( &$where, &$where_refund_subsql, $settings ) {
