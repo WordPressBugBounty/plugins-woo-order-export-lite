@@ -1,7 +1,7 @@
 <?php
 
-use Matrix\Matrix;
-use Matrix\Decomposition\QR;
+use WOE\Matrix\Matrix;
+use WOE\Matrix\Decomposition\QR;
 
 include __DIR__ . '/../vendor/autoload.php';
 

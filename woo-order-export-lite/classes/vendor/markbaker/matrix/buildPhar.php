@@ -33,7 +33,7 @@ if (file_exists($pharName)) {
 echo "Building phar file...\n";
 
 // the phar object
-$phar = new Phar($pharName, null, 'Matrix');
+$phar = new Phar($pharName, null, 'WOE\Matrix');
 $phar->buildFromDirectory($sourceDir);
 $phar->setStub(
 <<<'EOT'

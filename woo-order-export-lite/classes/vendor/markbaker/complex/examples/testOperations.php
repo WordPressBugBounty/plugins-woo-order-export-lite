@@ -1,7 +1,7 @@
 <?php
 
-use Complex\Complex as Complex;
-use Complex\Operations;
+use WOE\Complex\Complex as Complex;
+use WOE\Complex\Operations;
 
 include(__DIR__ . '/../vendor/autoload.php');
 
