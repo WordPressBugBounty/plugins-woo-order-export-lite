@@ -110,9 +110,7 @@ trait WC_Order_Export_Ajax_Helpers {
 			}
 			wp_delete_file( $filename );
             //also delete storage file
-            if(file_exists($filename . '.storage')) {
-                wp_delete_file($filename . '.storage');
-            }
+            WC_Order_Export_Engine::delete_storage_file($filename);
 		}
 	}
 
@@ -168,9 +166,7 @@ trait WC_Order_Export_Ajax_Helpers {
 			delete_transient( $this->tempfile_prefix . $file_id );
 			wp_delete_file( $filename );
             //also delete storage file
-            if(file_exists($filename . '.storage')) {
-                wp_delete_file($filename . '.storage');
-            }
+            WC_Order_Export_Engine::delete_storage_file($filename);
 		}
 		$this->stop_prevent_object_cache();
 	}
