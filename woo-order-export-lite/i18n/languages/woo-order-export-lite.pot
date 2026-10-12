@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Advanced Order Export For WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 14:38+0000\n"
+"POT-Creation-Date: 2026-10-12 04:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -57,7 +57,7 @@ msgstr ""
 msgid "1st row only"
 msgstr ""
 
-#: classes/core/trait-woe-core-extractor.php:1187
+#: classes/core/trait-woe-core-extractor.php:1194
 msgid "[Rest of the World]"
 msgstr ""
 
@@ -200,13 +200,13 @@ msgstr ""
 msgid "Can't create temporary file"
 msgstr ""
 
-#: classes/admin/tabs/ajax/trait-wc-order-export-ajax-helpers.php:143
+#: classes/admin/tabs/ajax/trait-wc-order-export-ajax-helpers.php:145
 msgid ""
 "Can't find exported file. Try button \"Export [w/o progressbar]\" or contact "
 "to export support."
 msgstr ""
 
-#: classes/admin/tabs/ajax/trait-wc-order-export-ajax-helpers.php:138
+#: classes/admin/tabs/ajax/trait-wc-order-export-ajax-helpers.php:140
 msgid ""
 "Can't find transient key. Try button \"Export [w/o progressbar]\" or contact "
 "to export support."
@@ -536,7 +536,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: classes/core/trait-woe-core-extractor.php:1264
+#: classes/core/trait-woe-core-extractor.php:1271
 msgid "Direct"
 msgstr ""
 
@@ -613,7 +613,7 @@ msgid "Embedded Product Image"
 msgstr ""
 
 #: classes/class-wc-order-export-admin.php:413
-#: classes/core/trait-woe-core-extractor.php:175
+#: classes/core/trait-woe-core-extractor.php:176
 msgid "empty"
 msgstr ""
 
@@ -1128,7 +1128,7 @@ msgstr ""
 msgid "Misc settings"
 msgstr ""
 
-#: classes/core/trait-woe-core-extractor.php:1270
+#: classes/core/trait-woe-core-extractor.php:1277
 msgid "Mobile app"
 msgstr ""
 
@@ -1397,7 +1397,7 @@ msgid "Orders range"
 msgstr ""
 
 #. %s is the source value
-#: classes/core/trait-woe-core-extractor.php:1252
+#: classes/core/trait-woe-core-extractor.php:1259
 #, php-format
 msgid "Organic: %s"
 msgstr ""
@@ -1684,7 +1684,7 @@ msgid "Read how to fix it"
 msgstr ""
 
 #. %s is the source value
-#: classes/core/trait-woe-core-extractor.php:1258
+#: classes/core/trait-woe-core-extractor.php:1265
 #, php-format
 msgid "Referral: %s"
 msgstr ""
@@ -1726,7 +1726,7 @@ msgstr ""
 msgid "Reset settings"
 msgstr ""
 
-#: classes/core/trait-woe-core-extractor.php:1197
+#: classes/core/trait-woe-core-extractor.php:1204
 msgid "Rest of the World"
 msgstr ""
 
@@ -1887,7 +1887,7 @@ msgid "Sort orders by "
 msgstr ""
 
 #. %s is the source value
-#: classes/core/trait-woe-core-extractor.php:1246
+#: classes/core/trait-woe-core-extractor.php:1253
 #, php-format
 msgid "Source: %s"
 msgstr ""
@@ -2186,7 +2186,7 @@ msgstr ""
 msgid "Transaction ID"
 msgstr ""
 
-#: classes/admin/tabs/ajax/trait-wc-order-export-ajax-helpers.php:136
+#: classes/admin/tabs/ajax/trait-wc-order-export-ajax-helpers.php:138
 msgid ""
 "Transient API is broken. Try to disable \"Transients Manager\" plugin or "
 "contact to export support."
@@ -2212,8 +2212,8 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: classes/core/trait-woe-core-extractor.php:1225
-#: classes/core/trait-woe-core-extractor.php:1283
+#: classes/core/trait-woe-core-extractor.php:1232
+#: classes/core/trait-woe-core-extractor.php:1290
 #: classes/core/class-wc-order-export-order-fields.php:737
 msgid "Unknown"
 msgstr ""
@@ -2287,7 +2287,7 @@ msgstr ""
 msgid "Vendors/creators"
 msgstr ""
 
-#: classes/core/trait-woe-core-extractor.php:1276
+#: classes/core/trait-woe-core-extractor.php:1283
 msgid "Web admin"
 msgstr ""
 

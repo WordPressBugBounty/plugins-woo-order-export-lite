@@ -71,7 +71,9 @@ trait WC_Order_Export_Ajax_Helpers {
 
 				break;
 		}
-		header( 'Content-Disposition: attachment; filename="' . $download_name . '"' );
+
+		if ( apply_filters('woe_force_download', true) )
+			header( 'Content-Disposition: attachment; filename="' . $download_name . '"' );
 	}
 
 	protected function start_prevent_object_cache() {
@@ -173,8 +175,12 @@ trait WC_Order_Export_Ajax_Helpers {
 
 	public function build_and_send_file( $settings, $export = false, $browser_output = true ) {
 		$result = [];
-		$ids = isset($_REQUEST['ids']) ? sanitize_text_field(wp_unslash($_REQUEST['ids'])) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$filename = WC_Order_Export_Engine::build_file_full( $settings, '', 0, explode( ",", $ids ) );
+		if( isset($_REQUEST['ids']) ) {
+			 $ids = sanitize_text_field(wp_unslash($_REQUEST['ids'])); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			 $ids = array_filter(explode( ",",$ids));
+		} else
+			$ids = [];
+		$filename = WC_Order_Export_Engine::build_file_full( $settings, '', 0, $ids );
 		$download_name = WC_Order_Export_Engine::make_filename( $settings['export_filename'] );
 		WC_Order_Export_Manage::set_correct_file_ext( $settings );
 		if ( $export ) {

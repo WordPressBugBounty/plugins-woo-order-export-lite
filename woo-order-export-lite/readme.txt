@@ -5,7 +5,7 @@ Tags: order export,export orders,woocommerce,order,export
 Requires PHP: 7.4.0
 Requires at least: 4.7
 Tested up to: 7.1
-Stable tag: 4.1.2
+Stable tag: 4.1.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -125,6 +125,9 @@ Yes, you can email a request to aprokaev@gmail.com. We intensively develop this 
 6. Select orders to export and use "bulk action".
 
 == Changelog ==
+
+= 4.1.3 - 2026-10-12 =
+* Fixed SQL injection. Thank Hamza Tlili for reporting this vulnerability
 
 = 4.1.2 - 2026-10-05 =
 * Fixed bug - temporary files were not deleted when export fails (XLS/PDF formats only)
